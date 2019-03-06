@@ -3,17 +3,17 @@
 
 <head>
   <meta charset="utf-8">
-  <title>The Magical Cat Button</title>
+  <title>The Magical Shiba Button</title>
 </head>
 
 <body>
-  <button id="cat-button">magical shiba button</button>
+  <button id="shiba-button">magical shiba button</button>
   <div id="images">
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     //
-    $("#cat-button").on("click", function() {
+    $("#shiba-button").on("click", function() {
 
       //
       var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=shiba";
@@ -31,14 +31,14 @@
           var imageUrl = response.data.image_original_url;
 
           //
-          var catImage = $("<img>");
+          var shibaImage = $("<img>");
 
           //
-          catImage.attr("src", imageUrl);
-          catImage.attr("alt", "cat image");
+          shibaImage.attr("src", imageUrl);
+          shibaImage.attr("alt", "shiba image");
 
           //
-          $("#images").prepend(catImage);
+          $("#images").prepend(shibaImage);
         });
     });
   </script>
